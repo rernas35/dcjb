@@ -14,7 +14,8 @@ apply plugin: 'java'
 repositories {
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    jcenter()	
+    mavenLocal()
 }
 
 // In this section you declare the dependencies for your production and test code
@@ -28,5 +29,8 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
 	compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
-    
+	compile group: 'org.devside.ee', name: 'dcjb-client', version: '1.0.0-SNAPSHOT'
+	compile group: 'org.apache.maven.plugin-tools', name: 'maven-plugin-annotations', version: '3.4'
+	compile group: 'org.apache.maven', name: 'maven-plugin-api', version: '3.0'
+	
 }

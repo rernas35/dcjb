@@ -17,5 +17,6 @@ public @interface JumpNextOne {
 
 //@JumpNextOne(exceptions={Exception.class, IOException.class})
 	Class[] exceptions();
+	String name();
 	
 }

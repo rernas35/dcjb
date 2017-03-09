@@ -44,3 +44,16 @@ install {
         pom.groupId= 'org.devside.ee'
     }
 }
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://localhost/Users/rernas/.m2/repository")
+            pom.version = '1.0.0-SNAPSHOT'
+           	pom.artifactId = 'dcjb-client'
+           	pom.groupId= 'org.devside.ee'
+        }
+    }
+}
+

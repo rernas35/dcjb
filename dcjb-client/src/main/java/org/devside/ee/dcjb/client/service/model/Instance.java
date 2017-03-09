@@ -59,4 +59,13 @@ public class Instance implements Comparable<Instance> {
 		});
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		Instance instance = (Instance)obj;
+		if  (!(instance instanceof Instance)){
+			return false;
+		}
+		return address.equals(instance.getAddress()) && port == instance.getPort();
+	}
+	
 }

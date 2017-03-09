@@ -19,12 +19,13 @@ import org.devside.ee.dcjb.client.service.model.Instance;
 
 import com.sun.naming.internal.ResourceManager;
 
+@SuppressWarnings("unchecked")
 public class DcjbNamingContext implements Context{
 	
 	public static final String IMPL = ".impl";
 
 //	private static final Logger LOG = LoggerFactory.getLogger(DcjbNamingContext.class);
-	ConcurrentHashMap<String, List<Context>> contextMap = new ConcurrentHashMap<String, List<Context>>(); 
+	static ConcurrentHashMap<String, List<Context>> contextMap = new ConcurrentHashMap<String, List<Context>>(); 
 	
 	
 	public DcjbNamingContext(Map<Instance,List<String>> serverServiceMap,Hashtable environment) {
