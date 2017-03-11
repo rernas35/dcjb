@@ -2,15 +2,19 @@ package org.devside.ee.maven_dcjb_aspect_plugin;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
+import org.codehaus.classworlds.ClassRealm;
 import org.devside.ee.dcjb.client.annotation.JumpNextOne;
 
 import javassist.CannotCompileException;
@@ -29,8 +33,6 @@ public class JumpNextAspect extends AbstractMojo{
 	MavenProject project;
 
 	public  void execute() {
-
-		
 		Class[] defaultExceptions = {Exception.class/*,SocketException.class,IOException.class*/};
 		boolean aspectApplied = false;
 		
@@ -132,6 +134,13 @@ public class JumpNextAspect extends AbstractMojo{
 		return catchStr;
 	}
 	
+	
+	public static void main(String[] args) {
+		
+		JumpNextOne jnoo ;
+		
+		
+	}
 	
 	
 }
