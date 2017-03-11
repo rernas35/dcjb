@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 public @interface JumpNextOne {
 
 //@JumpNextOne(exceptions={Exception.class, IOException.class})
-	Class[] exceptions() default {};
+	Class[] exceptions() ;
 	String name();
 	
 }

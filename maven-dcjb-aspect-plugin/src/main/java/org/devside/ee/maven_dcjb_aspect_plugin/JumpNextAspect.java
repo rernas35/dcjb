@@ -26,7 +26,7 @@ import javassist.NotFoundException;
 import javassist.bytecode.AccessFlag;
 
 
-@Mojo(name="applyClientCode",defaultPhase=LifecyclePhase.PROCESS_CLASSES)
+@Mojo(name="applyClientCode")
 public class JumpNextAspect extends AbstractMojo{
 	
 	@Parameter(defaultValue = "${project}", required = true, readonly = true)
