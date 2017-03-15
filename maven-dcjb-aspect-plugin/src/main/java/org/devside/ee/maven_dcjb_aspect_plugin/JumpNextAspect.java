@@ -33,7 +33,7 @@ public class JumpNextAspect extends AbstractMojo{
 	MavenProject project;
 	
 	static ClassPool pool = ClassPool.getDefault();
-	static Class[] defaultExceptions = {Exception.class/*,SocketException.class,IOException.class*/};
+	static Class[] defaultExceptions = {IllegalStateException.class/*,SocketException.class,IOException.class*/};
 	
 	public  void execute() {
 		
