@@ -9,6 +9,7 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'maven'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -28,3 +29,27 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
 }
+
+
+
+install {
+    repositories.mavenInstaller {
+        pom.version = '1.0.0-SNAPSHOT'
+        pom.artifactId = 'dcjb-service'
+        pom.groupId= 'org.devside.ee'
+    }
+}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://localhost/Users/rernas/.m2/repository")
+            pom.version = '1.0.0-SNAPSHOT'
+           	pom.artifactId = 'dcjb-service'
+           	pom.groupId= 'org.devside.ee'
+        }
+    }
+}
+
+
